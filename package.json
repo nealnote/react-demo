@@ -1,0 +1,26 @@
+{
+  "name": "web",
+  "version": "0.0.1",
+  "description": "react demo with browserify",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -t reactify src/index.js -o dest/index.js",
+    "watch": "watchify -t reactify src/index.js -o dest/index.js -dv",
+    "styl": "stylus -w src/index.styl -o dest/index.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "nealnote",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "browserify": "^10.2.6",
+    "express": "^4.13.1",
+    "react": "^0.13.2",
+    "reactify": "^1.1.1",
+    "stylus": "^0.51.1"
+  },
+  "devDependencies": {
+    "watchify": "^3.2.3"
+  }
+}
